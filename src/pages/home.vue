@@ -1,41 +1,6 @@
 <template>
   <div>
-    <div class="top_box w">
-      <div class="top_box_left">
-        <div class="logo_box">
-          <img class="logoImg" src="../assets/logo.png" alt />
-        </div>
-        <div class="top_cmName">
-          <h1>湖北未来蓝图钢结构工程有限公司</h1>
-          <p>主营：轻钢结构厂房 ，钢平台，C型钢</p>
-        </div>
-      </div>
-      <div class="top_box_right">
-        <div class="top_tel">
-          <img class="top_telImg" src="../assets/icontels.png" alt />
-        </div>
-        <div class="top_telNum">
-          <p>联系人：邹经理</p>
-          <p>13871461313</p>
-        </div>
-      </div>
-    </div>
-    <div class="head_box">
-      <el-menu
-        :default-active="activeIndex"
-        class="el-menu-demo"
-        mode="horizontal"
-        @select="handleSelect"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b"
-      >
-        <el-menu-item index="1">网站首页</el-menu-item>
-        <el-menu-item index="2">公司介绍</el-menu-item>
-        <el-menu-item index="3">产品介绍</el-menu-item>
-        <el-menu-item index="4">联系我们</el-menu-item>
-      </el-menu>
-    </div>
+    <Head activeIndex="1"></Head>
     <div class="swiper_box">
       <el-carousel trigger="click" height="500px">
         <el-carousel-item v-for="(item,index) in carouselImg" :key="index">
@@ -61,12 +26,12 @@
       <h3 class="product">产品列表</h3>
       <p class="product_usa">PRODUCTS</p>
       <div class="product_list">
-        <div class="product_list_one" v-for="(item,index) in 12" :key="index">
+        <div class="product_list_one" v-for="(item,index) in productList" :key="index">
           <div class="product_list_oneImg">
-            <img class="product_img" src alt />
+            <img class="product_img" :src="item.img" alt />
           </div>
           <div class="product_list_oneBottom">
-            <p>钢结构建设厂房工程</p>
+            <p class="sl-1">{{item.title}}</p>
             <p>查看</p>
           </div>
         </div>
@@ -88,61 +53,76 @@
         </ul>
       </div>
     </div>
-    <div class="footer_box">
-      <div class="footer_box_one">
-        <div class="footer_box_link w">
-          <div class="footer_box_title">友情链接</div>
-          <div class="footer_box_linkBox">
-            <p>江西钢结构</p>
-            <p>江西彩钢瓦生产批发</p>
-            <p>江西预制结构施工</p>
-          </div>
-        </div>
-      </div>
-      <div class="footer_box_two">
-        <ul class="foot_ul w">
-          <li>
-            <p class="p1">关于我们</p>
-            <p class="p2">企业介绍</p>
-            <p class="p2">网站地图</p>
-          </li>
-          <li>
-            <p class="p1">主营品牌</p>
-            <p class="p2">轻钢结构厂房 ，钢平台，C型钢</p>
-          </li>
-          <li>
-            <p class="p1">联系我们</p>
-            <p class="p2">地址：湖北省 黄冈市 浠水县 安时大道 众奥汽车服务中心3楼</p>
-            <p class="p2">电话:13871461313</p>
-          </li>
-          <li>
-            <div class="foot_logo">
-              <img class="foot_logoImg" src="../assets/logo.png" alt />
-            </div>
-            <p class="p2">© 湖北未来蓝图钢结构工程有限公司 版权所有</p>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <Footer></Footer>
   </div>
 </template>
 <script>
+import Head from '@/components/head'
+import Footer from '@/components/footer'
 export default {
+  components: {
+    Head,
+    Footer
+  },
   data() {
     return {
-      activeIndex: "1",
       carouselImg: [
         require("../assets/qiantai.jpg"),
         require("../assets/威诺思展厅1.jpg"),
         require("../assets/威诺思展厅2.jpg")
+      ],
+      productList: [
+        {
+          img: require("../assets/product1.jpg"),
+          title: "钢结构建设厂房工程"
+        },
+        {
+          img: require("../assets/product2.jpg"),
+          title: "钢结构 可定制钢构厂房"
+        },
+        {
+          img: require("../assets/product3.jpg"),
+          title: "钢结构 材质生产 工程用材料"
+        },
+        {
+          img: require("../assets/product4.jpg"),
+          title: "厂家直销 供应刚结构"
+        },
+        {
+          img: require("../assets/product5.jpg"),
+          title: "加工制作钢结构厂房框架安装 厂房工程"
+        },
+        {
+          img: require("../assets/product6.jpg"),
+          title: "厂家直销  未来蓝图钢构产品"
+        },
+        {
+          img: require("../assets/product7.jpg"),
+          title: "钢结构 销售厂家"
+        },
+        {
+          img: require("../assets/product8.jpg"),
+          title: "厂家直销 钢结构厂房 安装钢结构平台"
+        },
+        {
+          img: require("../assets/product9.jpg"),
+          title: "湖北杰锐 大型钢结构"
+        },
+        {
+          img: require("../assets/product10.jpg"),
+          title: "湖北 金属钢铁结构 加工钢结构 钢构件加工 建筑厂家"
+        },
+        {
+          img: require("../assets/product11.jpg"),
+          title: "钢结构设计 生产 安装"
+        },
+        {
+          img: require("../assets/product12.jpg"),
+          title: "生产钢结构工程 "
+        },
       ]
     };
   },
-  methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    }
-  }
 };
 </script>
 <style lang="scss" scoped>
@@ -150,79 +130,7 @@ export default {
   width: 1200px;
   margin: auto;
 }
-.top_box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  .top_box_left {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    .logo_box {
-      width: 65px;
-      height: 65px;
-      .logoImg {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .top_cmName {
-      margin-left: 10px;
-      h1 {
-        height: 24px;
-        line-height: 24px;
-        font-size: 24px;
-        font-family: "微软雅黑";
-        padding-bottom: 10px;
-      }
-    }
-  }
-  .top_box_right {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    .top_tel {
-      width: 30px;
-      height: 35px;
-      .top_telImg {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .top_telNum {
-      margin-left: 10px;
-      p:first-child {
-        font-family: "微软雅黑";
-        height: 14px;
-        line-height: 14px;
-        font-size: 14px;
-        display: block;
-        color: #555;
-        margin-bottom: 10px;
-      }
-      p:last-child {
-        font-family: "Microsoft YaHei";
-        color: #01a0eb;
-        font-style: normal;
-        font-weight: 400;
-        height: 18px;
-        line-height: 18px;
-        font-size: 18px;
-      }
-    }
-  }
-}
-.head_box {
-  background-color: rgb(84, 92, 100);
-  /deep/ .el-menu {
-    width: 1200px;
-    margin: auto;
-    border-bottom: none;
-  }
-}
+
 .el-carousel__item .swiperImg {
   display: block;
   width: 100%;
@@ -238,7 +146,7 @@ export default {
   background-color: #d3dce6;
 }
 .com_introduce_box {
-  background: url(../assets/home_content-aboutbg.jpg) no-repeat;
+  background: #fff url(../assets/home_content_aboutbg.jpg) no-repeat center;
   height: 340px;
   .location {
     height: 100%;
@@ -395,6 +303,7 @@ export default {
   flex-wrap: wrap;
   margin-top: 35px;
   .product_list_one {
+    width: 260px;
     margin: 0 53px 53px 0;
     .product_list_oneImg {
       width: 260px;
@@ -519,132 +428,5 @@ export default {
     }
   }
 }
-.footer_box {
-  .footer_box_one {
-    background: #ebebeb;
-    height: 80px;
-    .footer_box_link {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      height: 100%;
-      .footer_box_title {
-        height: 26px;
-        line-height: 26px;
-        text-align: left;
-        font-size: 22px;
-        font-family: "Microsoft YaHei";
-        color: #00a0ea;
-        padding: 0 22px 0 0;
-        border-right: 2px solid #bbbbbb;
-      }
-      .footer_box_linkBox {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-left: 100px;
-        p {
-          height: 20px;
-          line-height: 20px;
-          font-size: 14px;
-          color: #767676;
-          font-family: "Microsoft YaHei";
-          margin-right: 18px;
-        }
-      }
-    }
-  }
-  .footer_box_two {
-    background: #01a1ea;
-    padding: 56px 0 35px;
-    .foot_ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      li:nth-child(1) {
-        width: 75px;
-        height: 154px;
-        padding-right: 23px;
-        border-right: 1px solid #ebebeb;
-        .p1 {
-          font-size: 18px;
-          font-family: "微软雅黑";
-          color: #fff;
-          text-align: right;
-          margin-bottom: 10px;
-        }
-        .p2 {
-          font-size: 12px;
-          font-family: "微软雅黑";
-          color: #fff;
-          text-align: right;
-          margin-bottom: 10px;
-        }
-      }
-      li:nth-child(2) {
-        width: 335px;
-        height: 154px;
-        padding-right: 23px;
-        border-right: 1px solid #ebebeb;
-        .p1 {
-          font-size: 18px;
-          font-family: "微软雅黑";
-          color: #fff;
-          text-align: right;
-          margin-bottom: 10px;
-        }
-        .p2 {
-          font-size: 12px;
-          font-family: "微软雅黑";
-          color: #fff;
-          text-align: right;
-          margin-bottom: 10px;
-        }
-      }
-      li:nth-child(3) {
-        width: 335px;
-        height: 154px;
-        padding-right: 23px;
-        border-right: 1px solid #ebebeb;
-        .p1 {
-          font-size: 18px;
-          font-family: "微软雅黑";
-          color: #fff;
-          text-align: right;
-          margin-bottom: 10px;
-        }
-        .p2 {
-          font-size: 12px;
-          font-family: "微软雅黑";
-          color: #fff;
-          text-align: right;
-          margin-bottom: 10px;
-        }
-      }
-      li:nth-child(4) {
-        width: 335px;
-        height: 154px;
-        .foot_logo {
-          width: 135px;
-          height: 135px;
-          margin: 0 0 0 auto;
-          .foot_logoImg {
-            display: block;
-            width: 100%;
-            height: 100%;
-          }
-        }
-        .p2 {
-          margin: 0 0 0 auto;
-          width: 135px;
-          font-size: 12px;
-          font-family: "微软雅黑";
-          color: #fff;
-          text-align: center;
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
-}
+
 </style>
