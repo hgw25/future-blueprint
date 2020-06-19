@@ -26,11 +26,11 @@
                 <ul class="content_box_right_headRight">
                   <li>
                     <p>供应商</p>
-                    <p class="p1">湖北未来蓝图钢结构工程有限公司【公司网站】</p>
+                    <p class="p1" @click="goHome">湖北未来蓝图钢结构工程有限公司【公司网站】</p>
                   </li>
                   <li>
                     <p>所在地</p>
-                    <p class="p1">中国 湖北省 黄冈市 黄梅县</p>
+                    <p class="p1">湖北省 黄冈市 浠水县 安时大道 众奥汽车服务中心3楼</p>
                   </li>
                   <li>
                     <p>联系人</p>
@@ -97,9 +97,9 @@
 import Head from "@/components/head";
 import Footer from "@/components/footer";
 import Introduction from "@/components/introduction";
-import CompanyInfo from "@/components/CompanyInfo";
-import ProList from "@/components/ProList";
-import ContactUs from "@/components/ContactUs";
+import CompanyInfo from "@/components/companyInfo";
+import ProList from "@/components/proList";
+import ContactUs from "@/components/contactUs";
 export default {
   components: {
     Head,
@@ -129,6 +129,13 @@ export default {
           title: '厂家直销 钢结构厂房 安装钢结构平台'
         },
       ]
+    }
+  },
+  methods: {
+    goHome() {
+      this.$router.push({
+        path: "/"
+      })
     }
   }
 };

@@ -12,6 +12,10 @@
           <ProList></ProList>
         </div>
         <div class="content_rightBox">
+          <ContactUs class="content_one"></ContactUs>
+          <div class="contact_box_left">
+          <img src="../assets/map.png" alt />
+        </div>
         </div>
       </div>
     </div>
@@ -21,16 +25,18 @@
 <script>
 import Head from "@/components/head";
 import Footer from "@/components/footer";
-import Classfiy from "@/components/Classfiy";
-import CompanyInfo from "@/components/CompanyInfo";
-import ProList from "@/components/ProList";
+import Classfiy from "@/components/classfiy";
+import CompanyInfo from "@/components/companyInfo";
+import ProList from "@/components/proList";
+import ContactUs from "@/components/contactUs";
 export default {
   components: {
     Head,
     Footer,
     Classfiy,
     CompanyInfo,
-    ProList
+    ProList,
+    ContactUs
   }
 }
 </script>
@@ -60,6 +66,19 @@ export default {
       position: relative;
     }
     .content_rightBox {
+      .content_one {
+        margin-top: 8px;
+      }
+      .contact_box_left {
+        width: 100%;
+        height: 365px;
+        margin-top: -30px;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 }
