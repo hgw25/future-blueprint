@@ -16,9 +16,9 @@
           <p class="com_name">湖北未来蓝图钢结构工程有限公司</p>
           <p
             class="com_content"
-          >湖北未来蓝图钢结构工程有限公司是一家具有钢结构、钢架工程设计、制作和安装、生产销售的企业，自成立以来，我们主要从轻钢结构厂房 、钢平台、C型钢等项目。杰锐秉承“团结、诚信、务实的企业精神和“视质量为生命、以信誉求发展”的企业理念，遵循“诚为上，信为本”的准则，以“钢的质量、铁的信誉”为宗旨来回报长期以来关怀和杰锐钢构成长的新老客户，欢迎你们的光临、指导，让我们携手合</p>
+          >湖北未来蓝图钢结构工程有限公司是一家具有钢结构、钢架工程设计、制作和安装、生产销售的企业，自成立以来，我们主要从轻钢结构厂房，重钢结构厂房，畜牧工程，轻钢别墅等项目。未来蓝图秉承“团结、诚信、务实的企业精神和“视质量为生命、以信誉求发展”的企业理念，遵循“诚为上，信为本”的准则，以“钢的质量、铁的信誉”为宗旨来回报长期以来关怀和未来蓝图钢构成长的新老客户，欢迎你们的光临、指导，让我们携手合</p>
         </div>
-        <div class="item_btn">【详细】</div>
+        <div class="item_btn" @click="goComInfo">【详细】</div>
         <img class="com_logo" src="../assets/logo.png" alt />
       </div>
     </div>
@@ -26,7 +26,12 @@
       <h3 class="product">产品列表</h3>
       <p class="product_usa">PRODUCTS</p>
       <div class="product_list">
-        <div class="product_list_one" v-for="(item,index) in productList" :key="index">
+        <div
+          class="product_list_one"
+          v-for="(item,index) in productList"
+          :key="index"
+          @click="goDetail(item.id, item.title)"
+        >
           <div class="product_list_oneImg">
             <img class="product_img" :src="item.img" alt />
           </div>
@@ -47,9 +52,8 @@
         <ul class="ul_box">
           <li>联系人：邹经理</li>
           <li>手机：13871461313</li>
-          <li>联系人：南经理</li>
-          <li>电话：13691859456</li>
-          <li>地址：湖北省 黄冈市 浠水县 安时大道 众奥汽车服务中心3楼</li>
+          <li>电话：0713-4506165</li>
+          <li>地址：湖北省 黄冈市 浠水县 浠水经济开发区安时大道</li>
         </ul>
       </div>
     </div>
@@ -57,8 +61,8 @@
   </div>
 </template>
 <script>
-import Head from '@/components/head'
-import Footer from '@/components/footer'
+import Head from "@/components/head";
+import Footer from "@/components/footer";
 export default {
   components: {
     Head,
@@ -67,62 +71,89 @@ export default {
   data() {
     return {
       carouselImg: [
-        require("../assets/qiantai.jpg"),
-        require("../assets/威诺思展厅1.jpg"),
-        require("../assets/威诺思展厅2.jpg")
+        require("../assets/lunbo1.jpg"),
+        require("../assets/lunbo2.jpg")
       ],
       productList: [
         {
-          img: require("../assets/product1.jpg"),
+          id: "1",
+          img: require("../assets/DSC_0902.jpg"),
           title: "钢结构建设厂房工程"
         },
         {
-          img: require("../assets/product2.jpg"),
+          id: "2",
+          img: require("../assets/DSC_0930.jpg"),
           title: "钢结构 可定制钢构厂房"
         },
         {
-          img: require("../assets/product3.jpg"),
+          id: "3",
+          img: require("../assets/product6.jpg"),
           title: "钢结构 材质生产 工程用材料"
         },
         {
-          img: require("../assets/product4.jpg"),
+          id: "4",
+          img: require("../assets/product7.jpg"),
           title: "厂家直销 供应刚结构"
         },
         {
-          img: require("../assets/product5.jpg"),
-          title: "加工制作钢结构厂房框架安装 厂房工程"
+          id: "5",
+          img: require("../assets/DSC_0930.jpg"),
+          title: "加工制作钢结构厂房框架安装 厂房.."
         },
         {
-          img: require("../assets/product6.jpg"),
-          title: "厂家直销  未来蓝图钢构产品"
+          id: "6",
+          img: require("../assets/product8.jpg"),
+          title: "厂家直销 未来蓝图钢构产品"
         },
         {
-          img: require("../assets/product7.jpg"),
+          id: "7",
+          img: require("../assets/product9.jpg"),
           title: "钢结构 销售厂家"
         },
         {
-          img: require("../assets/product8.jpg"),
-          title: "厂家直销 钢结构厂房 安装钢结构平台"
+          id: "8",
+          img: require("../assets/DSC_0952.jpg"),
+          title: "厂家直销 钢结构厂房 安装钢结构..."
         },
         {
+          id: "9",
+          img: require("../assets/DSC_0939.jpg"),
+          title: "湖北未来蓝图 大型钢结构"
+        },
+        {
+          id: "10",
           img: require("../assets/product9.jpg"),
-          title: "湖北杰锐 大型钢结构"
+          title: "湖北 金属钢铁结构 加工钢结构 钢"
         },
         {
-          img: require("../assets/product10.jpg"),
-          title: "湖北 金属钢铁结构 加工钢结构 钢构件加工 建筑厂家"
-        },
-        {
-          img: require("../assets/product11.jpg"),
+          id: "11",
+          img: require("../assets/product13.jpg"),
           title: "钢结构设计 生产 安装"
         },
         {
-          img: require("../assets/product12.jpg"),
-          title: "生产钢结构工程 "
-        },
+          id: "12",
+          img: require("../assets/DSC_0929.jpg"),
+          title: "生产钢结构工程"
+        }
       ]
     };
   },
+  methods: {
+    goDetail(id,title) {
+      this.$router.push({
+        path: "/productDetail",
+        query: {
+          id,
+          title
+        }
+      });
+    },
+    goComInfo() {
+      this.$router.push({
+        path: "/comInfo"
+      });
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -428,5 +459,4 @@ export default {
     }
   }
 }
-
 </style>

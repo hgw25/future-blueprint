@@ -20,18 +20,18 @@
                 </div>
                 <div
                   class="content_one_right"
-                >湖北杰锐钢结构工程有限公司是一家具有钢结构、钢架工程设计、制作和安装、生产销售的企业，自成立以来，我们主要从轻钢结构厂房 、钢平台、C型钢等项目。杰锐秉承“团结、诚信、务实的企业精神和“视质量为生命、以信誉求发展”的企业理念，遵循“诚为上，信为本”的准则，以“钢的质量、铁的信誉”为宗旨来回报长期以来关怀和杰锐钢构成长的新老客户，欢迎你们的光临、指导，让我们携手合作，共谋发展，构筑美好明天！</div>
+                >湖北未来蓝图钢结构工程有限公司是一家具有钢结构、钢架工程设计、制作和安装、生产销售的企业，自成立以来，我们主要从轻钢结构厂房，重钢结构厂房，畜牧工程，轻钢别墅等项目。未来蓝图秉承“团结、诚信、务实的企业精神和“视质量为生命、以信誉求发展”的企业理念，遵循“诚为上，信为本”的准则，以“钢的质量、铁的信誉”为宗旨来回报长期以来关怀和未来蓝图钢构成长的新老客户，欢迎你们的光临、指导，让我们携手合作，共谋发展，构筑美好明天！</div>
               </div>
             </div>
             <div class="contentBox_two">
               <div class="mode_con_title">基本信息</div>
               <div class="content_two">
-                <div class="content_twoText">公司名称：湖北杰锐钢结构工程有限公司</div>
+                <div class="content_twoText">公司名称：湖北未来蓝图钢结构工程有限公司</div>
                 <div class="content_twoText">联系人：邹经理</div>
                 <div class="content_twoText">手机：13871461313</div>
-                <div class="content_twoText">固定电话： 0713-3119333</div>
-                <div class="content_twoText">公司地址：湖北省 黄冈市 浠水县 安时大道 众奥汽车服务中心3楼</div>
-                <div class="content_twoText">公司网址：http://hbjrgg.d17.cc</div>
+                <div class="content_twoText">固定电话： 0713-4506165</div>
+                <div class="content_twoText">公司地址：湖北省 黄冈市 浠水县 浠水经济开发区安时大道</div>
+                <div class="content_twoText">公司网址：www.hbwllt.cn</div>
               </div>
             </div>
             <div class="contentBox_two">
@@ -40,9 +40,9 @@
                 <div class="content_twoText">公司类型：</div>
                 <div class="content_twoText">经营模式：生产型</div>
                 <div class="content_twoText">所属行业：建筑建材</div>
-                <div class="content_twoText">主营产品：轻钢结构厂房，钢平台，C型钢</div>
-                <div class="content_twoText">成立时间：2018年</div>
-                <div class="content_twoText">营业执照注册号：91421127MA494B5575</div>
+                <div class="content_twoText">主营产品：轻钢结构厂房，重钢结构厂房，畜牧工程，轻钢别墅</div>
+                <div class="content_twoText">成立时间：2016年</div>
+                <div class="content_twoText">营业执照注册号：91421125MA48BGXH4B</div>
               </div>
             </div>
             <ContactUs></ContactUs>

@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="content_box_left1">
       <div class="companyInfo">
         <div class="mode_con_title">
@@ -8,10 +7,10 @@
         </div>
       </div>
       <div class="contact_info">
-        <p class="contact_info_one">联系人： 赵先生</p>
-        <p class="contact_info_one">手机：18071226788</p>
-        <p class="contact_info_one">电话： 0713-3119333</p>
-        <p class="contact_info_one">地址： 中国 湖北省 黄冈市 黄梅县 大胜工业园区（湖北星火建设工程有限公司院内</p>
+        <p class="contact_info_one">联系人： 邹经理</p>
+        <p class="contact_info_one">手机：13871461313</p>
+        <p class="contact_info_one">电话： 0713-4506165</p>
+        <p class="contact_info_one">地址： 湖北省 黄冈市 浠水县 浠水经济开发区安时大道</p>
       </div>
     </div>
 
@@ -20,7 +19,7 @@
 <script>
 export default {
   name: "introduction",
-  
+
 };
 </script>
 <style lang="scss" scoped>

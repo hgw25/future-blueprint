@@ -7,7 +7,7 @@
         </div>
         <div class="top_cmName">
           <h1>湖北未来蓝图钢结构工程有限公司</h1>
-          <p>主营：轻钢结构厂房 ，钢平台，C型钢</p>
+          <p>主营：轻钢结构厂房，重钢结构厂房，畜牧工程，轻钢别墅</p>
         </div>
       </div>
       <div class="top_box_right">

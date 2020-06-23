@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="product_list">
-      <div class="product_listOne" v-for="(item,index) in proList" :key="index">
+      <div class="product_listOne" v-for="(item,index) in proList" :key="index" @click="goDetail(item.id, item.title)">
         <div class="product_listOne_left">
           <img :src="item.img" alt />
         </div>
@@ -24,23 +24,38 @@ export default {
     return {
       proList: [
         {
+          id: "5",
+          img: require("../assets/DSC_0930.jpg"),
+          title: "加工制作钢结构厂房框架安装 厂房.."
+        },
+        {
+          id: "6",
+          img: require("../assets/product8.jpg"),
+          title: "厂家直销 未来蓝图钢构产品"
+        },
+        {
+          id: "7",
           img: require("../assets/product9.jpg"),
-          title: "钢结构建设厂房工程"
+          title: "钢结构 销售厂家"
         },
         {
-          img: require("../assets/product10.jpg"),
-          title: "建设钢结构 厂房"
-        },
-        {
-          img: require("../assets/product11.jpg"),
-          title: "安装钢构大桥工程"
-        },
-        {
-          img: require("../assets/product12.jpg"),
-          title: "厂家直销 钢结构厂房 安装钢结构平台"
+          id: "8",
+          img: require("../assets/DSC_0952.jpg"),
+          title: "厂家直销 钢结构厂房 安装钢结构..."
         }
       ]
     };
+  },
+  methods: {
+    goDetail(id, title) {
+      this.$router.push({
+        path: "/productDetail",
+        query: {
+          id,
+          title
+        }
+      });
+    },
   }
 };
 </script>

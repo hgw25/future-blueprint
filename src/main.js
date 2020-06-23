@@ -6,10 +6,16 @@ import router from './router'
 import '../static/reset.css'
 Vue.config.productionTip = false
 
+router.afterEach((to, from, next) => {
+  window,
+  scrollTo(0, 0)
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })

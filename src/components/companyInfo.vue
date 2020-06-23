@@ -13,13 +13,13 @@
         <p class="comCertification">公司认证：</p>
       </div>
       <div class="name_link name_link_img3">
-        <p>公司地址：中国 湖北省 黄冈市 黄梅县 大胜工业园区（湖北星火建设工程有限公司院内</p>
+        <p>公司地址：湖北省 黄冈市 浠水县 浠水经济开发区安时大道</p>
       </div>
       <div class="name_link name_link_img4">
-        <p>企业类型：</p>
+        <p>企业类型：建筑类</p>
       </div>
       <div class="name_link name_link_img5">
-        <p>主营：轻钢结构厂房 ，钢平台，C型钢</p>
+        <p>主营：轻钢结构厂房，重钢结构厂房，畜牧工程，轻钢别墅</p>
       </div>
     </div>
   </div>

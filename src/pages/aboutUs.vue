@@ -14,8 +14,8 @@
         <div class="content_rightBox">
           <ContactUs class="content_one"></ContactUs>
           <div class="contact_box_left">
-          <img src="../assets/map.png" alt />
-        </div>
+            <img src="../assets/map.png" alt />
+          </div>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@ export default {
     ProList,
     ContactUs
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .w {
